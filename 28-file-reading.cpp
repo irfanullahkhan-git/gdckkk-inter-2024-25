@@ -3,8 +3,11 @@
 using namespace std;
 
 int main(){
-	ifstream myfile;
-	myfile.open("test.txt");
-	myfile<<"Hello World. this is my very first example line.";
-	myfile.close();	
+	ifstream myfile("test.txt");
+	string str, str1, str2;
+	myfile>>str>>str1>>str2;
+	cout<<str<<" - "<<str1<<" - "<<str2;
+	string str4;
+	getline(myfile, str4);
+	cout<<"\n"<<str4;
 }
